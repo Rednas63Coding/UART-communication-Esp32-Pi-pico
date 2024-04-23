@@ -9,12 +9,10 @@ RX_PIN = board.GP1
 # Initialize UART for communication with the ESP32
 uart = busio.UART(TX_PIN, RX_PIN, baudrate=115200)
 
-# Initialize UART for communication with the PC
-
 while True:
 
     if uart.in_waiting:  # Check if there's data in the ESP32 UART buffer
         data_from_esp32 = uart.read(uart.in_waiting)  # Read data from ESP32
-        print(data_from_esp32)  # Send data to PC
+        print(data_from_esp32)
 
-    time.sleep(0.1)  # Wait for a short while to prevent high CPU usage
+    time.sleep(0.1)
