@@ -1,4 +1,4 @@
-HardwareSerial &hSerial = Serial2; //can be Serial2 as well, just use proper pins 16 to 17 and 17 to 16
+HardwareSerial &hSerial = Serial2; //pin 16-RX   17-TX
 
 void setup() 
 {
